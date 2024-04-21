@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WebRTC Multiparty</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/style.css">
+        <style>
+            #meetingRoom div {
+                text-align: center;
+            }
+
+            .videoContainer {
+                float: left;
+                
+            }
+
+            #meetingRoom:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+
+        <h1 class="heading">WebRTC Multiparty</h1>
+        
+        <div id="roomSelection" style="display: block">
+
+           <div class="nameContainer">
+            <div class="UserName">
+                <label > Type User Name: </label>
+                <input class="inputBox" id="name" type="text" placeholder="Type User Name"/>
+           </div>
+
+            <div class="UserName">
+                <label> Type Room Name: </label>
+                <input class="inputBox" id="room" type="text" placeholder="Type Room Name"/>
+            </div>
+
+            <button id="register">Enter</button>
+           </div>
+        </div>
+
+        <!-- <div id="meetingRoom" style="display: none">
+            
+        </div> -->
+
+    </div>
+
+    <!-- <h1>Many to many</h1> -->
+    <div id="meetingRoom" style="display: block">
+           
+    </div>
+
+        <script src="app.js" ></script>
+        <script src="adapter-latest.js"></script>
+        <script src="kurento-utils.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="client.js"></script>
+    </body>
+</html>
